@@ -8,14 +8,11 @@ steps:
     FOO: BAR
   commands:
   - go test ./...
-
-- name: test2
-  image: golang
-  environment:
-    FOO: BAR
-  commands:
-  - echo "boom"
-  - go test -v ./...
-  
-
+- name: publish-image
+  image: plugins/docker
+  settings:
+      username: eelya
+      password: dzdPKubuYmZ8LatDdwFmfqtoqPE823mA
+      repo: eelya/zdrone
+      tags: $(git rev-parse HEAD | cut -c1-8)
 
