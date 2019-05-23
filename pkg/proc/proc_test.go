@@ -21,5 +21,5 @@ func TestMul(t *testing.T) {
 func TestMul2(t *testing.T) {
 	assert := assert.New(t)
 	p := NewProc(11)
-	assert.Equal(110, p.Mul(11))
+	assert.Equal(121, p.Mul(11))
 }
