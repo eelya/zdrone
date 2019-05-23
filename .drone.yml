@@ -16,4 +16,3 @@ steps:
         from_secret: docker-registry-pwd
       repo: eelya/zdrone
       tags: latest
-
