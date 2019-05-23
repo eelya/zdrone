@@ -11,6 +11,8 @@ steps:
 
 - name: test2
   image: golang
+  environment:
+    FOO: ZZZ
   commands:
   - echo "boom"
   - go test -v ./...
