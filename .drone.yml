@@ -12,7 +12,7 @@ steps:
 - name: test2
   image: golang
   environment:
-    FOO: ZZZ
+    FOO: BAR
   commands:
   - echo "boom"
   - go test -v ./...
