@@ -4,6 +4,8 @@ name: default
 steps:
 - name: test
   image: golang
+  environment:
+    FOO: BAR
   commands:
   - go test ./...
 
@@ -12,5 +14,6 @@ steps:
   commands:
   - echo "boom"
   - go test -v ./...
+  
 
 
