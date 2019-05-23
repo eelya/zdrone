@@ -15,4 +15,5 @@ steps:
       password: 
         from_secret: docker-registry-pwd
       repo: eelya/zdrone
-      tags: latest
+      tags: DRONE_COMMIT_SHA
+
