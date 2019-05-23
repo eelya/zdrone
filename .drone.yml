@@ -8,14 +8,12 @@ steps:
     FOO: BAR
   commands:
   - go test ./...
-
-- name: test2
-  image: golang
-  environment:
-    FOO: BAR
-  commands:
-  - echo "boom"
-  - go test -v ./...
-  
-
+- name: publish-image
+  image: plugins/docker
+  settings:
+      username: eelya
+      password: 
+        from_secret: docker-registry-pwd
+      repo: eelya/zdrone
+      tags: DRONE_COMMIT_SHA
 
