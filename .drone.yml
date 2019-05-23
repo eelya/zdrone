@@ -4,7 +4,16 @@ name: default
 steps:
 - name: test
   image: golang
+  environment:
+    FOO: BAR
   commands:
-  - go build
-  - go test
+  - go test ./...
+- name: publish-image
+  image: plugins/docker
+  settings:
+      username: eelya
+      password: 
+        from_secret: docker-registry-pwd
+      repo: eelya/zdrone
+      tags: DRONE_COMMIT_SHA
 
