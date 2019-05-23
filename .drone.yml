@@ -5,6 +5,7 @@ steps:
 - name: test
   image: golang
   commands:
-  - go build
-  - go test
+  - apt-get update
+  - go build ./...
+  - go test ./...
 
