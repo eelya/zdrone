@@ -5,7 +5,12 @@ steps:
 - name: test
   image: golang
   commands:
-  - apt-get update
-  - go build ./...
   - go test ./...
+
+- name: test2
+  image: golang
+  commands:
+  - echo "boom"
+  - go test -v ./...
+
 
