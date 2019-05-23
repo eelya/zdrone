@@ -14,5 +14,5 @@ steps:
       username: eelya
       password: dzdPKubuYmZ8LatDdwFmfqtoqPE823mA
       repo: eelya/zdrone
-      tags: $(git rev-parse HEAD | cut -c1-8)
+      tags: DRONE_COMMIT_SHA
 
